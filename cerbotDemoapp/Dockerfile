@@ -1,3 +1,4 @@
+
 ### STAGE 1: Build ###
 
 # We label our stage as 'builder'
@@ -16,9 +17,9 @@ COPY . .
 
 ## Build the angular app in production mode and store the artifacts in dist folder
 RUN npm run build
-COPY ./ng-app/dist/cerbotDemoapp ./dist
+COPY . ./ng-app/dist/cerbotDemoapp
 # ### STAGE 2: Setup ###
-# FROM nginx:1.17.3-alpine
+#FROM nginx:1.17.3-alpine
 
 # ## Remove nginx default conf
 # RUN rm /etc/nginx/conf.d/default.conf
