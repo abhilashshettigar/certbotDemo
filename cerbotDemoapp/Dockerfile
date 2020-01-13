@@ -16,7 +16,7 @@ COPY . .
 
 ## Build the angular app in production mode and store the artifacts in dist folder
 RUN npm run build
-COPY --from=builder ./ng-app/dist/cerbotDemoapp .
+COPY ./ng-app/dist/cerbotDemoapp ./dist
 # ### STAGE 2: Setup ###
 # FROM nginx:1.17.3-alpine
 
