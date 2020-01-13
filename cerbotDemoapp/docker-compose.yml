@@ -41,7 +41,7 @@ volumes:
     driver: local
     driver_opts:
       type: none
-      device: /home/abhilashs/node_project/views/
+      device: /var/certbotDemo/cerbotDemoapp/
       o: bind
 
 networks:
