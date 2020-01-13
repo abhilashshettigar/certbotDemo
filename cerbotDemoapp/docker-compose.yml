@@ -6,9 +6,8 @@ services:
       dockerfile: Dockerfile
     image: app
     container_name: app
-    command: npm run build
     volumes:
-      -  ./dist/cerbotDemoapp:web-root
+      -  ./dist/cerbotDemoapp:/var/www/html
     restart: unless-stopped
     networks:
       - app-network

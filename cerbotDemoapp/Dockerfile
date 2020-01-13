@@ -14,10 +14,9 @@ RUN npm set progress=false && npm config set depth 0 && npm cache clean --force
 RUN npm i
 RUN npm run clean
 COPY . .
-
-## Build the angular app in production mode and store the artifacts in dist folder
 RUN npm run build
-COPY . ./ng-app/dist/cerbotDemoapp
+## Build the angular app in production mode and store the artifacts in dist folder
+
 # ### STAGE 2: Setup ###
 #FROM nginx:1.17.3-alpine
 
