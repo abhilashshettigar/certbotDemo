@@ -6,7 +6,12 @@ services:
       dockerfile: Dockerfile
     image: app
     container_name: app
+    command: npm run build
+    volumes:
+      -  ./dist/cerbotDemoapp:web-root
     restart: unless-stopped
+    networks:
+      - app-network
   webserver:
     image: nginx:mainline-alpine
     container_name: webserver
